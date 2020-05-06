@@ -1,0 +1,690 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── cargotree.txt
+├── dtree.txt
+├── raspberrypi.txt
+├── smalltree.txt
+├── src
+│   ├── climb
+│   │   ├── mod.rs
+│   │   ├── processing_error.rs
+│   │   └── tree_tools.rs
+│   └── main.rs
+├── target
+│   ├── debug
+│   │   ├── build
+│   │   │   ├── bitflags-3b5d1b6917885eb9
+│   │   │   │   ├── invoked.timestamp
+│   │   │   │   ├── out
+│   │   │   │   ├── output
+│   │   │   │   ├── root-output
+│   │   │   │   └── stderr
+│   │   │   ├── bitflags-8f8096f73f05341b
+│   │   │   │   ├── build-script-build
+│   │   │   │   ├── build_script_build-8f8096f73f05341b
+│   │   │   │   └── build_script_build-8f8096f73f05341b.d
+│   │   │   ├── libc-3c575d8c487463c4
+│   │   │   │   ├── build-script-build
+│   │   │   │   ├── build_script_build-3c575d8c487463c4
+│   │   │   │   └── build_script_build-3c575d8c487463c4.d
+│   │   │   ├── libc-efe0771527375d94
+│   │   │   │   ├── invoked.timestamp
+│   │   │   │   ├── out
+│   │   │   │   ├── output
+│   │   │   │   ├── root-output
+│   │   │   │   └── stderr
+│   │   │   ├── memchr-3d4ed38314f3fb35
+│   │   │   │   ├── build-script-build
+│   │   │   │   ├── build_script_build-3d4ed38314f3fb35
+│   │   │   │   └── build_script_build-3d4ed38314f3fb35.d
+│   │   │   └── memchr-d917e2a563480428
+│   │   │       ├── invoked.timestamp
+│   │   │       ├── out
+│   │   │       ├── output
+│   │   │       ├── root-output
+│   │   │       └── stderr
+│   │   ├── climb
+│   │   ├── climb-3daef56d83b5c2df
+│   │   ├── climb-3daef56d83b5c2df.d
+│   │   ├── climb-88891cc46e3c9d06
+│   │   ├── climb-88891cc46e3c9d06.d
+│   │   ├── climb.d
+│   │   ├── deps
+│   │   │   ├── aho_corasick-d42320449c38a935.d
+│   │   │   ├── ansi_term-9b3723e1d8975123.d
+│   │   │   ├── atty-57bd14037111135f.d
+│   │   │   ├── bitflags-fafef23a5bd34dbf.d
+│   │   │   ├── cfg_if-bba07bf772ef76c5.d
+│   │   │   ├── clap-5d71f2187934a616.d
+│   │   │   ├── climb-0cefbaf2ccb7d83f
+│   │   │   ├── climb-0cefbaf2ccb7d83f.d
+│   │   │   ├── climb-2a7fe689a66f312d
+│   │   │   ├── climb-2a7fe689a66f312d.d
+│   │   │   ├── climb-30eb6559f00bc685
+│   │   │   ├── climb-30eb6559f00bc685.d
+│   │   │   ├── climb-3daef56d83b5c2df
+│   │   │   ├── climb-3daef56d83b5c2df.d
+│   │   │   ├── climb-781bd872eb6c7694
+│   │   │   ├── climb-781bd872eb6c7694.d
+│   │   │   ├── climb-88891cc46e3c9d06
+│   │   │   ├── climb-88891cc46e3c9d06.d
+│   │   │   ├── climb-dcc6dae6c8f88aa6
+│   │   │   ├── climb-dcc6dae6c8f88aa6.d
+│   │   │   ├── generational_arena-d09470ef69e67777.d
+│   │   │   ├── id_tree-4f1558f5a71cc5eb.d
+│   │   │   ├── lazy_static-ae6e842bed154030.d
+│   │   │   ├── libaho_corasick-d42320449c38a935.rlib
+│   │   │   ├── libansi_term-9b3723e1d8975123.rlib
+│   │   │   ├── libatty-57bd14037111135f.rlib
+│   │   │   ├── libbitflags-fafef23a5bd34dbf.rlib
+│   │   │   ├── libc-341721774f2c862c.d
+│   │   │   ├── libcfg_if-bba07bf772ef76c5.rlib
+│   │   │   ├── libclap-5d71f2187934a616.rlib
+│   │   │   ├── libgenerational_arena-d09470ef69e67777.rlib
+│   │   │   ├── libid_tree-4f1558f5a71cc5eb.rlib
+│   │   │   ├── liblazy_static-ae6e842bed154030.rlib
+│   │   │   ├── liblibc-341721774f2c862c.rlib
+│   │   │   ├── libmemchr-1004b6c95c366a9b.rlib
+│   │   │   ├── libregex-715997a90873e871.rlib
+│   │   │   ├── libregex_syntax-c2b64925a08ba06d.rlib
+│   │   │   ├── libslab_tree-d2284486a4da4b56.rlib
+│   │   │   ├── libsnowflake-cf4357ecbcf4c238.rlib
+│   │   │   ├── libstrsim-1b95a7743cf2dc8b.rlib
+│   │   │   ├── libtextwrap-151cdcec457e90f4.rlib
+│   │   │   ├── libthread_local-a50171e538fe2e48.rlib
+│   │   │   ├── libunicode_segmentation-f3184ee8e21e25af.rlib
+│   │   │   ├── libunicode_width-5ae3faf42691c778.rlib
+│   │   │   ├── libvec_map-cba1d7c5922edde9.rlib
+│   │   │   ├── libvec_tree-4c9106ea65c6cb86.rlib
+│   │   │   ├── memchr-1004b6c95c366a9b.d
+│   │   │   ├── regex-715997a90873e871.d
+│   │   │   ├── regex_syntax-c2b64925a08ba06d.d
+│   │   │   ├── slab_tree-d2284486a4da4b56.d
+│   │   │   ├── snowflake-cf4357ecbcf4c238.d
+│   │   │   ├── strsim-1b95a7743cf2dc8b.d
+│   │   │   ├── test-0fcd1d86e6403f9c.d
+│   │   │   ├── textwrap-151cdcec457e90f4.d
+│   │   │   ├── thread_local-a50171e538fe2e48.d
+│   │   │   ├── unicode_segmentation-f3184ee8e21e25af.d
+│   │   │   ├── unicode_width-5ae3faf42691c778.d
+│   │   │   ├── vec_map-cba1d7c5922edde9.d
+│   │   │   └── vec_tree-4c9106ea65c6cb86.d
+│   │   ├── examples
+│   │   ├── incremental
+│   │   │   ├── climb-16oywzogagiu8
+│   │   │   │   ├── s-fgxhz5j7vb-1b3xmzf-1crpw9ygypn57
+│   │   │   │   │   ├── 16irsj9i7xzt6lql.o
+│   │   │   │   │   ├── 1f8wopp46rg3colw.o
+│   │   │   │   │   ├── 1ij1qabn4almssq3.o
+│   │   │   │   │   ├── 1kuixnmrgnhp8ody.o
+│   │   │   │   │   ├── 1kzppga6ygljqk2l.o
+│   │   │   │   │   ├── 1ltg11u67kg7uoa5.o
+│   │   │   │   │   ├── 1qdzjxtdkgljp5wq.o
+│   │   │   │   │   ├── 1ru08liz17tm2qcw.o
+│   │   │   │   │   ├── 1yhj54jo2d2674ps.o
+│   │   │   │   │   ├── 23gykje35obifoo5.o
+│   │   │   │   │   ├── 25w4g5tjeqhmwvna.o
+│   │   │   │   │   ├── 2aaxriyroh4naj7m.o
+│   │   │   │   │   ├── 2cwlf9tzwfmcbv4d.o
+│   │   │   │   │   ├── 2d8oquxwhtigwy3y.o
+│   │   │   │   │   ├── 2eytekv5hq7z3i2k.o
+│   │   │   │   │   ├── 2f44vn8f5cyta90.o
+│   │   │   │   │   ├── 2ik25augiiu1epyq.o
+│   │   │   │   │   ├── 2m923o4xja274r56.o
+│   │   │   │   │   ├── 2qcrbbzwn2ivgrg7.o
+│   │   │   │   │   ├── 2r0xboyy7hv7krqr.o
+│   │   │   │   │   ├── 2t7tg1k0kig4dw49.o
+│   │   │   │   │   ├── 2to7ip4x3s6uuoxz.o
+│   │   │   │   │   ├── 2u8yv8i077pt4sj5.o
+│   │   │   │   │   ├── 2xdi9lbh8vwvh1ll.o
+│   │   │   │   │   ├── 2y7poavemds2m8cj.o
+│   │   │   │   │   ├── 2ygzv3lquxq6zi1h.o
+│   │   │   │   │   ├── 31wdifvrj03yte7y.o
+│   │   │   │   │   ├── 321j7vlngi5x8oy.o
+│   │   │   │   │   ├── 33lw0lipeij2pbpw.o
+│   │   │   │   │   ├── 33y3ahxepetop1i0.o
+│   │   │   │   │   ├── 34dfrykyqma8pwco.o
+│   │   │   │   │   ├── 38zox7l47fy5bbsn.o
+│   │   │   │   │   ├── 3kz0xi2zto9s9bp7.o
+│   │   │   │   │   ├── 3l1qsgf96yq6hona.o
+│   │   │   │   │   ├── 3l3wn2wiwqssxpdb.o
+│   │   │   │   │   ├── 3tcv0kx3z77kc89.o
+│   │   │   │   │   ├── 3uox4cb2uatz2dfh.o
+│   │   │   │   │   ├── 3uxda7xwf6kfcoog.o
+│   │   │   │   │   ├── 3v3gx79jtfl7wu6j.o
+│   │   │   │   │   ├── 3yvihounl5t3qg5l.o
+│   │   │   │   │   ├── 49r7uq2irt351668.o
+│   │   │   │   │   ├── 4ko0yzgfkkb2qxer.o
+│   │   │   │   │   ├── 4kvzlnmxec7k4hgk.o
+│   │   │   │   │   ├── 4mk2a1fetnnmvlqv.o
+│   │   │   │   │   ├── 4s1er1r33hqo9w0e.o
+│   │   │   │   │   ├── 4z2jks48npqx6m9x.o
+│   │   │   │   │   ├── 518zt3msrcku7grg.o
+│   │   │   │   │   ├── 531r9hqxho5nieg3.o
+│   │   │   │   │   ├── 54zjar94qrb1ps9c.o
+│   │   │   │   │   ├── 55nwi6pgimkdoxwe.o
+│   │   │   │   │   ├── 55zioymkrx9ypq79.o
+│   │   │   │   │   ├── 594lcz5j24ny80of.o
+│   │   │   │   │   ├── 5ehriz7x4geu267o.o
+│   │   │   │   │   ├── 6zwdyol2n39bj1g.o
+│   │   │   │   │   ├── ag4sx0m4ed8z0g8.o
+│   │   │   │   │   ├── cmf2dt63xw27jlf.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── ihhu1d4cyp8ipr.o
+│   │   │   │   │   ├── kmpew7o34oyvohv.o
+│   │   │   │   │   ├── nm7ej5lg18e7la5.o
+│   │   │   │   │   ├── no5hk9zvetdnbji.o
+│   │   │   │   │   ├── ovxrb9457lwbts5.o
+│   │   │   │   │   ├── pmnuxvp31g4srfc.o
+│   │   │   │   │   ├── qnnv312frvmwt0w.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── thsjh2mhci6t0eb.o
+│   │   │   │   │   ├── tpqfpid7dkhalbe.o
+│   │   │   │   │   ├── w366fk5kt06qwkp.o
+│   │   │   │   │   └── work-products.bin
+│   │   │   │   └── s-fgxhz5j7vb-1b3xmzf.lock
+│   │   │   ├── climb-1cb7dc2sn6zrd
+│   │   │   │   ├── s-fgonkz7l8i-1obc81j-1dd5qxofwva5k
+│   │   │   │   │   ├── 10brhyh6oxo73f7a.o
+│   │   │   │   │   ├── 10rqt9vdsyx9wh5b.o
+│   │   │   │   │   ├── 147ilrpqiy4rtrye.o
+│   │   │   │   │   ├── 1667uob7jqkrqugx.o
+│   │   │   │   │   ├── 18m9vex5gumgjpsx.o
+│   │   │   │   │   ├── 193kfio7zqoxgtkr.o
+│   │   │   │   │   ├── 1abckfq4k5ecdcig.o
+│   │   │   │   │   ├── 1cgumdd8hfx3y7nj.o
+│   │   │   │   │   ├── 1e2ggpugyg6s5hp2.o
+│   │   │   │   │   ├── 1g5acu0977runfot.o
+│   │   │   │   │   ├── 1glnjs9ie5st54v3.o
+│   │   │   │   │   ├── 1jtznuc0uahagj5v.o
+│   │   │   │   │   ├── 1kep9ejowqq0k5u.o
+│   │   │   │   │   ├── 1sh97qvdit37plpk.o
+│   │   │   │   │   ├── 1uu20lokk1f3bd6s.o
+│   │   │   │   │   ├── 1ywokk6ekjecxvdv.o
+│   │   │   │   │   ├── 20rbt14j537a33gw.o
+│   │   │   │   │   ├── 2dfq40usd3wufdjy.o
+│   │   │   │   │   ├── 2jfucdd3wgelyap2.o
+│   │   │   │   │   ├── 2jnpo7abzxn0ciyw.o
+│   │   │   │   │   ├── 2ondh9kj4zyeb8ts.o
+│   │   │   │   │   ├── 2p7ziad43k3f02yx.o
+│   │   │   │   │   ├── 2r7inj2x27zhqqtq.o
+│   │   │   │   │   ├── 36fxv74zbs4rotlr.o
+│   │   │   │   │   ├── 36o1907tspic6bbc.o
+│   │   │   │   │   ├── 37qhhsdndvgnqt93.o
+│   │   │   │   │   ├── 37us9uaxc27sgfwg.o
+│   │   │   │   │   ├── 38s9ekou0oruf994.o
+│   │   │   │   │   ├── 38w84w6dtjwsnvp7.o
+│   │   │   │   │   ├── 3arm670ljgjv59pl.o
+│   │   │   │   │   ├── 3fk9gmvqs05t6jyv.o
+│   │   │   │   │   ├── 3hot0n7uaywyceli.o
+│   │   │   │   │   ├── 3kxqme7replrjysa.o
+│   │   │   │   │   ├── 3ma7tdqotb0hss7t.o
+│   │   │   │   │   ├── 3v28j4ihm0t6psxe.o
+│   │   │   │   │   ├── 3yrnnlxiou7byjmg.o
+│   │   │   │   │   ├── 40i8s02fbsyb1vwa.o
+│   │   │   │   │   ├── 45x52lnw821ie10b.o
+│   │   │   │   │   ├── 4jf52bwailxgygf1.o
+│   │   │   │   │   ├── 4jwxdmpsz1mflvt9.o
+│   │   │   │   │   ├── 4llhfpe8i2af1c76.o
+│   │   │   │   │   ├── 4sc75s3oc64pvhwm.o
+│   │   │   │   │   ├── 4takr6p5uj0zvavh.o
+│   │   │   │   │   ├── 4zbt5tp8dx8im3qc.o
+│   │   │   │   │   ├── 56lfk3m7wjl7l7ex.o
+│   │   │   │   │   ├── 57iajtqtkh7x6bui.o
+│   │   │   │   │   ├── 5bte80ojknwtk124.o
+│   │   │   │   │   ├── 6e90ctkq1v1gwr5.o
+│   │   │   │   │   ├── 6ihu9wptyadoec.o
+│   │   │   │   │   ├── 8u42f357nhgrg2m.o
+│   │   │   │   │   ├── 9y6a2v5isq2eznw.o
+│   │   │   │   │   ├── a5ykcls3n8ygm3f.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── djdu12gp4x02nb3.o
+│   │   │   │   │   ├── jmy9o3fwt236ca1.o
+│   │   │   │   │   ├── n1ixmwbt4jxc7z5.o
+│   │   │   │   │   ├── o8q5sfjn9hrmwcm.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── svnt89pq1nzb7bv.o
+│   │   │   │   │   ├── work-products.bin
+│   │   │   │   │   └── z62z92sfbkrdtlr.o
+│   │   │   │   ├── s-fgonkz7l8i-1obc81j.lock
+│   │   │   │   ├── s-fgonvg0vvr-1kcrhva.lock
+│   │   │   │   └── s-fgonvg0vvr-1kcrhva-working
+│   │   │   │       ├── 10brhyh6oxo73f7a.o
+│   │   │   │       ├── 10rqt9vdsyx9wh5b.o
+│   │   │   │       ├── 147ilrpqiy4rtrye.o
+│   │   │   │       ├── 1667uob7jqkrqugx.o
+│   │   │   │       ├── 18m9vex5gumgjpsx.o
+│   │   │   │       ├── 193kfio7zqoxgtkr.o
+│   │   │   │       ├── 1abckfq4k5ecdcig.o
+│   │   │   │       ├── 1cgumdd8hfx3y7nj.o
+│   │   │   │       ├── 1e2ggpugyg6s5hp2.o
+│   │   │   │       ├── 1g5acu0977runfot.o
+│   │   │   │       ├── 1glnjs9ie5st54v3.o
+│   │   │   │       ├── 1jtznuc0uahagj5v.o
+│   │   │   │       ├── 1kep9ejowqq0k5u.o
+│   │   │   │       ├── 1sh97qvdit37plpk.o
+│   │   │   │       ├── 1uu20lokk1f3bd6s.o
+│   │   │   │       ├── 1ywokk6ekjecxvdv.o
+│   │   │   │       ├── 20rbt14j537a33gw.o
+│   │   │   │       ├── 2dfq40usd3wufdjy.o
+│   │   │   │       ├── 2jfucdd3wgelyap2.o
+│   │   │   │       ├── 2jnpo7abzxn0ciyw.o
+│   │   │   │       ├── 2ondh9kj4zyeb8ts.o
+│   │   │   │       ├── 2p7ziad43k3f02yx.o
+│   │   │   │       ├── 2r7inj2x27zhqqtq.o
+│   │   │   │       ├── 36fxv74zbs4rotlr.o
+│   │   │   │       ├── 36o1907tspic6bbc.o
+│   │   │   │       ├── 37qhhsdndvgnqt93.o
+│   │   │   │       ├── 37us9uaxc27sgfwg.o
+│   │   │   │       ├── 38s9ekou0oruf994.o
+│   │   │   │       ├── 38w84w6dtjwsnvp7.o
+│   │   │   │       ├── 3arm670ljgjv59pl.o
+│   │   │   │       ├── 3fk9gmvqs05t6jyv.o
+│   │   │   │       ├── 3hot0n7uaywyceli.o
+│   │   │   │       ├── 3kxqme7replrjysa.o
+│   │   │   │       ├── 3ma7tdqotb0hss7t.o
+│   │   │   │       ├── 3v28j4ihm0t6psxe.o
+│   │   │   │       ├── 3yrnnlxiou7byjmg.o
+│   │   │   │       ├── 40i8s02fbsyb1vwa.o
+│   │   │   │       ├── 45x52lnw821ie10b.o
+│   │   │   │       ├── 4jf52bwailxgygf1.o
+│   │   │   │       ├── 4jwxdmpsz1mflvt9.o
+│   │   │   │       ├── 4llhfpe8i2af1c76.o
+│   │   │   │       ├── 4sc75s3oc64pvhwm.o
+│   │   │   │       ├── 4takr6p5uj0zvavh.o
+│   │   │   │       ├── 4zbt5tp8dx8im3qc.o
+│   │   │   │       ├── 56lfk3m7wjl7l7ex.o
+│   │   │   │       ├── 57iajtqtkh7x6bui.o
+│   │   │   │       ├── 5bte80ojknwtk124.o
+│   │   │   │       ├── 6e90ctkq1v1gwr5.o
+│   │   │   │       ├── 6ihu9wptyadoec.o
+│   │   │   │       ├── 8u42f357nhgrg2m.o
+│   │   │   │       ├── 9y6a2v5isq2eznw.o
+│   │   │   │       ├── a5ykcls3n8ygm3f.o
+│   │   │   │       ├── dep-graph.bin
+│   │   │   │       ├── djdu12gp4x02nb3.o
+│   │   │   │       ├── jmy9o3fwt236ca1.o
+│   │   │   │       ├── n1ixmwbt4jxc7z5.o
+│   │   │   │       ├── o8q5sfjn9hrmwcm.o
+│   │   │   │       ├── query-cache.bin
+│   │   │   │       ├── svnt89pq1nzb7bv.o
+│   │   │   │       ├── work-products.bin
+│   │   │   │       └── z62z92sfbkrdtlr.o
+│   │   │   ├── climb-1yzv8bkqg6m1b
+│   │   │   │   ├── s-fgno5d2efw-1xhggr9-1mlo6v2u5ulax
+│   │   │   │   │   ├── 18cx6q7k80rsccyn.o
+│   │   │   │   │   ├── 1fur9zxprx6h62a7.o
+│   │   │   │   │   ├── 1hbiz9sjmdhisqyo.o
+│   │   │   │   │   ├── 1heqx28tj8ldcawt.o
+│   │   │   │   │   ├── 1mawb5zv9vznk7p7.o
+│   │   │   │   │   ├── 1n3ntvwi4eui0864.o
+│   │   │   │   │   ├── 1nt0ohd7okkzgego.o
+│   │   │   │   │   ├── 1wbhqb8g1rmb7q4o.o
+│   │   │   │   │   ├── 1zqmw43tozonivtw.o
+│   │   │   │   │   ├── 21ygyd7l6kl4vjxy.o
+│   │   │   │   │   ├── 28qbwln6fbkhz95s.o
+│   │   │   │   │   ├── 2apzqtgqmm50adva.o
+│   │   │   │   │   ├── 3bl885c3vj9pbndr.o
+│   │   │   │   │   ├── 3lbdxogtkhtsxk32.o
+│   │   │   │   │   ├── 3mz7izuqkexblh04.o
+│   │   │   │   │   ├── 3xwkpbygetr4esv9.o
+│   │   │   │   │   ├── 3yxyfazlbjkbqm2o.o
+│   │   │   │   │   ├── 41nomg2t7wxqt97z.o
+│   │   │   │   │   ├── 45bjne85j4z27fwr.o
+│   │   │   │   │   ├── 45x6o7ww4ew71t9b.o
+│   │   │   │   │   ├── 46exv0oc6ttka0wv.o
+│   │   │   │   │   ├── 4a2pm0ob3oxxfboe.o
+│   │   │   │   │   ├── 4aqkfrk3s9a1b7dk.o
+│   │   │   │   │   ├── 4d1w1mci9otu8no1.o
+│   │   │   │   │   ├── 4jb52jx6kno0zkwc.o
+│   │   │   │   │   ├── 4qcod7jn3x8m2zmd.o
+│   │   │   │   │   ├── 4ufoowiv1hcnd0zr.o
+│   │   │   │   │   ├── 4vdmzon4h3lcd13u.o
+│   │   │   │   │   ├── 4z9z8g14kyeh14bk.o
+│   │   │   │   │   ├── 50gvgk8vlwf1je11.o
+│   │   │   │   │   ├── 50y309gbku1uvj4c.o
+│   │   │   │   │   ├── 54r4m2g3zjicqrcb.o
+│   │   │   │   │   ├── 56dynn1xdxt5iaht.o
+│   │   │   │   │   ├── 56vshfwo4ledlzkt.o
+│   │   │   │   │   ├── 5cj6xv4xkcjlbebn.o
+│   │   │   │   │   ├── 5fbdsv7x3oyzowsv.o
+│   │   │   │   │   ├── 8377t5wauvozh5r.o
+│   │   │   │   │   ├── cd3fu7eurxcfvyb.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── gb0ia9ou0j64ct7.o
+│   │   │   │   │   ├── n7jseu4dw7fegff.o
+│   │   │   │   │   ├── nq1iclvr8wocxra.o
+│   │   │   │   │   ├── p1bs9jky5cagjp5.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── u8v4reaeww290xf.o
+│   │   │   │   │   ├── ungi3qx4yhzfks9.o
+│   │   │   │   │   └── work-products.bin
+│   │   │   │   └── s-fgno5d2efw-1xhggr9.lock
+│   │   │   ├── climb-27ps0hpp2h8zw
+│   │   │   │   ├── s-fgnqaq0cwk-jhfbz0-2kgvd9imynle
+│   │   │   │   │   ├── 15t5j4x3gxam2cuf.o
+│   │   │   │   │   ├── 16esp0xennvb136f.o
+│   │   │   │   │   ├── 16z85d8g9lum1z1s.o
+│   │   │   │   │   ├── 173ly0ifxmrqcdl0.o
+│   │   │   │   │   ├── 17qq9ug11181qjvx.o
+│   │   │   │   │   ├── 1cnb782pjfnj1i1w.o
+│   │   │   │   │   ├── 1gcbio6q6h6hvm3i.o
+│   │   │   │   │   ├── 1gmz1kdbidd9x7mb.o
+│   │   │   │   │   ├── 1l2z11d2wgb939lv.o
+│   │   │   │   │   ├── 1n2obakrabdevogs.o
+│   │   │   │   │   ├── 1oadcln95aqncjvw.o
+│   │   │   │   │   ├── 1yok6p8mxsiwnm9m.o
+│   │   │   │   │   ├── 1z2gvkw6i3za40ao.o
+│   │   │   │   │   ├── 24862udz1rmx4m8c.o
+│   │   │   │   │   ├── 24vovvrejwsf6yix.o
+│   │   │   │   │   ├── 266o878e1gqjkz8z.o
+│   │   │   │   │   ├── 290zt6upskj0ig1e.o
+│   │   │   │   │   ├── 2dydg6ts8qdj3gsy.o
+│   │   │   │   │   ├── 2hdyrwqryb9odusi.o
+│   │   │   │   │   ├── 2hhwgccglp3nzt50.o
+│   │   │   │   │   ├── 2idmdys03tbsaa26.o
+│   │   │   │   │   ├── 2ipi7iqanl336gu7.o
+│   │   │   │   │   ├── 2rjq2ofgwuyk8tjh.o
+│   │   │   │   │   ├── 2v818dadujemc28s.o
+│   │   │   │   │   ├── 2vyy6zti4r2kwb2y.o
+│   │   │   │   │   ├── 3a96yx2n64l26kv9.o
+│   │   │   │   │   ├── 3h777ghhg410us.o
+│   │   │   │   │   ├── 3ijacmma1uromxql.o
+│   │   │   │   │   ├── 3j4zwdvfm96g3mut.o
+│   │   │   │   │   ├── 3l3mn8zgzl8870ag.o
+│   │   │   │   │   ├── 3qnqathpckyncx44.o
+│   │   │   │   │   ├── 3rewbvhikr7fblxu.o
+│   │   │   │   │   ├── 3w5qyd2ld81qxxiq.o
+│   │   │   │   │   ├── 42mfwgkfyg2ih177.o
+│   │   │   │   │   ├── 43fakrb9k6abm091.o
+│   │   │   │   │   ├── 4c117s14cl7gyaci.o
+│   │   │   │   │   ├── 4dsosmhhyro1wvv.o
+│   │   │   │   │   ├── 4eeqo0h1psvhnvi7.o
+│   │   │   │   │   ├── 4hu1wijp84ar3sbc.o
+│   │   │   │   │   ├── 4i0wnldsseecy0pb.o
+│   │   │   │   │   ├── 4lrc6pxl0grkz0im.o
+│   │   │   │   │   ├── 4m87lngip7vo43tl.o
+│   │   │   │   │   ├── 4p8847vk95nwzqto.o
+│   │   │   │   │   ├── 4t0iozwg38dd88uv.o
+│   │   │   │   │   ├── 4zhe44xx5xyqfof3.o
+│   │   │   │   │   ├── 51310pjbrmutnlie.o
+│   │   │   │   │   ├── 5egjmbh7z3au45m1.o
+│   │   │   │   │   ├── 5g6sqow5vvza7ni6.o
+│   │   │   │   │   ├── 64v74le4j4rkm0n.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── hxag08irgb6fy9z.o
+│   │   │   │   │   ├── kjk5ybs9b1mnqea.o
+│   │   │   │   │   ├── kpiqmvtvqvlwrx.o
+│   │   │   │   │   ├── mqe5whv0fqy5k3u.o
+│   │   │   │   │   ├── qkorye7spp65fvf.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── typ4bzm3bvow1nb.o
+│   │   │   │   │   ├── work-products.bin
+│   │   │   │   │   └── z1y329tdhle565a.o
+│   │   │   │   └── s-fgnqaq0cwk-jhfbz0.lock
+│   │   │   ├── climb-2d5rjh2t6qq3p
+│   │   │   │   ├── s-fh1p5crvzy-etzqgj-221b2h9lq47
+│   │   │   │   │   ├── 12blg8ugwzbv04ra.o
+│   │   │   │   │   ├── 18itech9cvcoru6r.o
+│   │   │   │   │   ├── 198ajyzx1tovopyy.o
+│   │   │   │   │   ├── 1bh9f271hvsgkvsn.o
+│   │   │   │   │   ├── 1saal8pd36qeu45u.o
+│   │   │   │   │   ├── 1w4dkk5ta524ea68.o
+│   │   │   │   │   ├── 21xndtjm689x9vfu.o
+│   │   │   │   │   ├── 2gbdb985fdu834o2.o
+│   │   │   │   │   ├── 2k0yrzfule7lq93l.o
+│   │   │   │   │   ├── 2k5rzddsa2xkhmtg.o
+│   │   │   │   │   ├── 2kq70rt65qfy6evn.o
+│   │   │   │   │   ├── 2laamfobpp4vlndc.o
+│   │   │   │   │   ├── 2m0u79p7pc175r9n.o
+│   │   │   │   │   ├── 2mkaktea2ky5mlfn.o
+│   │   │   │   │   ├── 2mtj5e2noj2j07ei.o
+│   │   │   │   │   ├── 2n1y9wr6ok7imbya.o
+│   │   │   │   │   ├── 2nxge00f2zofjmox.o
+│   │   │   │   │   ├── 2oj4wsmans6wno4b.o
+│   │   │   │   │   ├── 2otbdw9m0s3sm1nr.o
+│   │   │   │   │   ├── 2zip4q2wbehetguy.o
+│   │   │   │   │   ├── 32f3tc0axgjlnycg.o
+│   │   │   │   │   ├── 357vn747uu9f7a9m.o
+│   │   │   │   │   ├── 36gq2lkfrd0b3qee.o
+│   │   │   │   │   ├── 3dqqh884ia9cm70s.o
+│   │   │   │   │   ├── 3dvjxptob89bkrow.o
+│   │   │   │   │   ├── 3em4uyzcd9gosj0z.o
+│   │   │   │   │   ├── 3fmtbtv34l8wv5l2.o
+│   │   │   │   │   ├── 3nrnlidwx1i59zs9.o
+│   │   │   │   │   ├── 3tlkjsxkefe2px2q.o
+│   │   │   │   │   ├── 3z8d2pcz6djypa6i.o
+│   │   │   │   │   ├── 42p9rl08vhy099zk.o
+│   │   │   │   │   ├── 4aps7tsp24i17255.o
+│   │   │   │   │   ├── 4b0myrvspdbkl8dm.o
+│   │   │   │   │   ├── 4dl0gco916vgz46u.o
+│   │   │   │   │   ├── 4o450oy46mdq6hfh.o
+│   │   │   │   │   ├── 4xy40mx82w60ia9q.o
+│   │   │   │   │   ├── 4y1jdv02x6ws1kyw.o
+│   │   │   │   │   ├── 5199qbij7rcnf337.o
+│   │   │   │   │   ├── 57cry2ml0fwx43tm.o
+│   │   │   │   │   ├── 5baippn6oen7t4nl.o
+│   │   │   │   │   ├── 5cnt6871q4bka9o5.o
+│   │   │   │   │   ├── 5em8ywf5ohcv7b0c.o
+│   │   │   │   │   ├── 5gjuud7ycwzup19z.o
+│   │   │   │   │   ├── 5ocb55up25lp6am.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── fu2x7n8dg7skgto.o
+│   │   │   │   │   ├── h46mpvp6k2qbfv7.o
+│   │   │   │   │   ├── i182gpxzqj7bt56.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── w8pkoldg3c2w7u5.o
+│   │   │   │   │   ├── work-products.bin
+│   │   │   │   │   ├── yjs23ukxiumqfta.o
+│   │   │   │   │   ├── zaujhodvnrfj7cx.o
+│   │   │   │   │   └── zs2mnafci3gguh0.o
+│   │   │   │   └── s-fh1p5crvzy-etzqgj.lock
+│   │   │   ├── climb-35zklt86ih5ld
+│   │   │   │   ├── s-fh1pk2ad54-1gst1hi-29s2jrcr6cqe9
+│   │   │   │   │   ├── 15jo7j76xd26rppi.o
+│   │   │   │   │   ├── 15zovtwav0zl31p9.o
+│   │   │   │   │   ├── 1bfpluyugdubmrlb.o
+│   │   │   │   │   ├── 1bidati2dzjcr0mg.o
+│   │   │   │   │   ├── 1c9kjgd0irnt7o82.o
+│   │   │   │   │   ├── 1evnh02vt5lm4nuh.o
+│   │   │   │   │   ├── 1necawt478jeo8t6.o
+│   │   │   │   │   ├── 1nlem94bty1s77k.o
+│   │   │   │   │   ├── 1r6ot5g0hwvsrj5a.o
+│   │   │   │   │   ├── 1tji4wnu19e7jou9.o
+│   │   │   │   │   ├── 1ulpzbin5v9iamao.o
+│   │   │   │   │   ├── 1z5mox7e1bztzqki.o
+│   │   │   │   │   ├── 22rmdbx9n5zmife3.o
+│   │   │   │   │   ├── 2exflzzyecl5welb.o
+│   │   │   │   │   ├── 2f7z0oam1k0ewmxx.o
+│   │   │   │   │   ├── 2fh2cptmtkbb1qls.o
+│   │   │   │   │   ├── 2fif2lluafmpex7c.o
+│   │   │   │   │   ├── 2u2aph5vcslxyxgz.o
+│   │   │   │   │   ├── 2uqke3ox8bvavtef.o
+│   │   │   │   │   ├── 2xk9le3e8o1add0e.o
+│   │   │   │   │   ├── 30bi7kjvxsa6ig50.o
+│   │   │   │   │   ├── 34pvl3fzmglel11o.o
+│   │   │   │   │   ├── 35fk5jk3poufhokc.o
+│   │   │   │   │   ├── 3gp65k99gffajpv.o
+│   │   │   │   │   ├── 3gx63np9aewq1emi.o
+│   │   │   │   │   ├── 3iemzxdc8fwr3b7s.o
+│   │   │   │   │   ├── 3ki1n2925q780x65.o
+│   │   │   │   │   ├── 3plzzywzf6eeqy8o.o
+│   │   │   │   │   ├── 3t1sx1tlwvzs7s6f.o
+│   │   │   │   │   ├── 3t7h1ogyyot040h8.o
+│   │   │   │   │   ├── 3wn6fjpot185gihc.o
+│   │   │   │   │   ├── 3z5e2fn66axo7bcc.o
+│   │   │   │   │   ├── 41o0goixsajylqug.o
+│   │   │   │   │   ├── 45ttapdqsfc7h6nm.o
+│   │   │   │   │   ├── 463wffsta7xcxz3i.o
+│   │   │   │   │   ├── 4ach86nu557cbvau.o
+│   │   │   │   │   ├── 4m7vuqvquq8iks8z.o
+│   │   │   │   │   ├── 4qvfu2bu0iezyao5.o
+│   │   │   │   │   ├── 4sdbos5o4gj1t0sa.o
+│   │   │   │   │   ├── 4tqmz8x5joz2yikb.o
+│   │   │   │   │   ├── 5636g13tp8uw1fwn.o
+│   │   │   │   │   ├── 59k8r7szhdzzztnq.o
+│   │   │   │   │   ├── 5ksrgtuegrz2cit.o
+│   │   │   │   │   ├── a7lqn85y8y75snf.o
+│   │   │   │   │   ├── d929e43w4u4z2hi.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── jzflcjujdvr0s9q.o
+│   │   │   │   │   ├── kiewbib1om7e1g5.o
+│   │   │   │   │   ├── mbwsfh0kr7ftstl.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── vjwx8wrstje50g.o
+│   │   │   │   │   └── work-products.bin
+│   │   │   │   └── s-fh1pk2ad54-1gst1hi.lock
+│   │   │   ├── climb-dxffc4k4mvws
+│   │   │   │   ├── s-fgwhz5lfq5-12vxnyx-3gyrft6s2vgo1
+│   │   │   │   │   ├── 1339czoabtka6ree.o
+│   │   │   │   │   ├── 15x3zd3e9bpbj7d5.o
+│   │   │   │   │   ├── 1b4nb1646g98c5jz.o
+│   │   │   │   │   ├── 1hk7lis1e0tpc14d.o
+│   │   │   │   │   ├── 1iifztcbj9zgk8oj.o
+│   │   │   │   │   ├── 1kdd6nbou626bopu.o
+│   │   │   │   │   ├── 1kmg7xsa63emq8d1.o
+│   │   │   │   │   ├── 1muirpw2q7k016pr.o
+│   │   │   │   │   ├── 1nt561w9hblnxt9i.o
+│   │   │   │   │   ├── 1qt9ygo3svofh3jt.o
+│   │   │   │   │   ├── 20p0gtfpxoeorfl9.o
+│   │   │   │   │   ├── 24198lyjqsalk6ms.o
+│   │   │   │   │   ├── 28zetppwqmd5tltz.o
+│   │   │   │   │   ├── 2ad9b511rrjlmgzr.o
+│   │   │   │   │   ├── 2byb66hmgs416og8.o
+│   │   │   │   │   ├── 2ctvjecojm7smeax.o
+│   │   │   │   │   ├── 2l1mvykchsqoxsfc.o
+│   │   │   │   │   ├── 2lshnq5w3kgh61hz.o
+│   │   │   │   │   ├── 2szg9kcxfzl7vvd4.o
+│   │   │   │   │   ├── 2zcpivq2nj16ll64.o
+│   │   │   │   │   ├── 314cwt7l6rkhamrb.o
+│   │   │   │   │   ├── 31ahh5kz1t3kivab.o
+│   │   │   │   │   ├── 35solpgwienjk2qa.o
+│   │   │   │   │   ├── 3bugvw2iuid37jn.o
+│   │   │   │   │   ├── 3cego15hnhno6te9.o
+│   │   │   │   │   ├── 3eqbn2jhxhfffud.o
+│   │   │   │   │   ├── 3gb7bq51b8xbrt5l.o
+│   │   │   │   │   ├── 3odz3rzuv2e6t21c.o
+│   │   │   │   │   ├── 3q490f199tybq7e1.o
+│   │   │   │   │   ├── 3s9jvsjtdujdcuuz.o
+│   │   │   │   │   ├── 3v5k33z7ncg6ochu.o
+│   │   │   │   │   ├── 44s96cutxl0g42wh.o
+│   │   │   │   │   ├── 4bmdg01cj3cdxe5o.o
+│   │   │   │   │   ├── 4bp7auazgd1bby8.o
+│   │   │   │   │   ├── 4lkh4642dd68xxbe.o
+│   │   │   │   │   ├── 4pgen9j16a7jk1ju.o
+│   │   │   │   │   ├── 4r42fty87u4qc6fr.o
+│   │   │   │   │   ├── 4swzlqbju8rnrh4z.o
+│   │   │   │   │   ├── 4y9iz7otwpqzgvip.o
+│   │   │   │   │   ├── 5071odkxi7vpnuuu.o
+│   │   │   │   │   ├── 51h6ujmjq15jx5bv.o
+│   │   │   │   │   ├── 5che0ek7k22ie0wu.o
+│   │   │   │   │   ├── 61avez6vmr5ot9i.o
+│   │   │   │   │   ├── 6z9yxzxhe104pmq.o
+│   │   │   │   │   ├── 97p84sgidurdsyf.o
+│   │   │   │   │   ├── dep-graph.bin
+│   │   │   │   │   ├── efkz9taespt452f.o
+│   │   │   │   │   ├── itgsupug6r2ge5z.o
+│   │   │   │   │   ├── jt2krlge82yx8yq.o
+│   │   │   │   │   ├── kewerz6e0p7n6tb.o
+│   │   │   │   │   ├── qb12ccef54kwyl0.o
+│   │   │   │   │   ├── query-cache.bin
+│   │   │   │   │   ├── t0d6dzypqpwjczb.o
+│   │   │   │   │   └── work-products.bin
+│   │   │   │   └── s-fgwhz5lfq5-12vxnyx.lock
+│   │   │   └── test-1hcta5gl5hlu
+│   │   │       ├── s-fgqw7vafu9-1eju66x.lock
+│   │   │       └── s-fgqw7vafu9-1eju66x-working
+│   │   └── native
+│   └── release
+│       ├── build
+│       │   ├── bitflags-43aa6bc10d074b21
+│       │   │   ├── build-script-build
+│       │   │   ├── build_script_build-43aa6bc10d074b21
+│       │   │   └── build_script_build-43aa6bc10d074b21.d
+│       │   ├── bitflags-68b266bb5ad0e0f0
+│       │   │   ├── invoked.timestamp
+│       │   │   ├── out
+│       │   │   ├── output
+│       │   │   ├── root-output
+│       │   │   └── stderr
+│       │   ├── libc-3f68ad34d9fbf827
+│       │   │   ├── invoked.timestamp
+│       │   │   ├── out
+│       │   │   ├── output
+│       │   │   ├── root-output
+│       │   │   └── stderr
+│       │   ├── libc-a88bbb4158848778
+│       │   │   ├── build-script-build
+│       │   │   ├── build_script_build-a88bbb4158848778
+│       │   │   └── build_script_build-a88bbb4158848778.d
+│       │   ├── memchr-5519c2f2d3e9a71b
+│       │   │   ├── build-script-build
+│       │   │   ├── build_script_build-5519c2f2d3e9a71b
+│       │   │   └── build_script_build-5519c2f2d3e9a71b.d
+│       │   └── memchr-f7bf7e60e63b6985
+│       │       ├── invoked.timestamp
+│       │       ├── out
+│       │       ├── output
+│       │       ├── root-output
+│       │       └── stderr
+│       ├── climb
+│       ├── climb-7a978095f63b9078
+│       ├── climb-7a978095f63b9078.d
+│       ├── climb.d
+│       ├── climb-d0ad0adbeb9ac339
+│       ├── climb-d0ad0adbeb9ac339.d
+│       ├── deps
+│       │   ├── aho_corasick-40bf9e33fff71ec3.d
+│       │   ├── ansi_term-4f5a182454a147c6.d
+│       │   ├── atty-de18df45ab12de73.d
+│       │   ├── bitflags-747ae0876f17212f.d
+│       │   ├── cfg_if-03981062c9506716.d
+│       │   ├── clap-1be5aa09f7c4fc97.d
+│       │   ├── climb-7a978095f63b9078
+│       │   ├── climb-7a978095f63b9078.d
+│       │   ├── climb-7d56f6f0c2b89807
+│       │   ├── climb-7d56f6f0c2b89807.d
+│       │   ├── climb-c94851d008eca4fe
+│       │   ├── climb-c94851d008eca4fe.d
+│       │   ├── climb-d0ad0adbeb9ac339
+│       │   ├── climb-d0ad0adbeb9ac339.d
+│       │   ├── generational_arena-3f28427131f87533.d
+│       │   ├── lazy_static-2ef12dada2907492.d
+│       │   ├── libaho_corasick-40bf9e33fff71ec3.rlib
+│       │   ├── libansi_term-4f5a182454a147c6.rlib
+│       │   ├── libatty-de18df45ab12de73.rlib
+│       │   ├── libbitflags-747ae0876f17212f.rlib
+│       │   ├── libc-2bf0925f32a91521.d
+│       │   ├── libcfg_if-03981062c9506716.rlib
+│       │   ├── libclap-1be5aa09f7c4fc97.rlib
+│       │   ├── libgenerational_arena-3f28427131f87533.rlib
+│       │   ├── liblazy_static-2ef12dada2907492.rlib
+│       │   ├── liblibc-2bf0925f32a91521.rlib
+│       │   ├── libmemchr-587ab1e87e546fe7.rlib
+│       │   ├── libregex-5094017158b17864.rlib
+│       │   ├── libregex_syntax-942fc53e1bed8af1.rlib
+│       │   ├── libstrsim-f407a01d2fb264a4.rlib
+│       │   ├── libtextwrap-87ea56779eb0b3cc.rlib
+│       │   ├── libthread_local-26c3918f19e86622.rlib
+│       │   ├── libunicode_segmentation-e1392d46f83914ce.rlib
+│       │   ├── libunicode_width-892cd34b1afa6767.rlib
+│       │   ├── libvec_map-c38a97bf7c7f7188.rlib
+│       │   ├── libvec_tree-05283b0431b3d731.rlib
+│       │   ├── memchr-587ab1e87e546fe7.d
+│       │   ├── regex-5094017158b17864.d
+│       │   ├── regex_syntax-942fc53e1bed8af1.d
+│       │   ├── strsim-f407a01d2fb264a4.d
+│       │   ├── textwrap-87ea56779eb0b3cc.d
+│       │   ├── thread_local-26c3918f19e86622.d
+│       │   ├── unicode_segmentation-e1392d46f83914ce.d
+│       │   ├── unicode_width-892cd34b1afa6767.d
+│       │   ├── vec_map-c38a97bf7c7f7188.d
+│       │   └── vec_tree-05283b0431b3d731.d
+│       ├── examples
+│       ├── incremental
+│       └── native
+└── tests
+    └── test.rs
+
+51 directories, 636 files

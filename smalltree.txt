@@ -1,0 +1,10 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── smalltree.txt
+└── src
+    ├── main.rs
+    └── test
+        └── test.rs
+
+2 directories, 5 files

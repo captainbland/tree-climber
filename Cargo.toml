@@ -1,0 +1,11 @@
+[package]
+name = "climb"
+version = "0.1.0"
+authors = ["Captain Bland <lightnix@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+regex = "1"
+unicode-segmentation = "1.3.0"
+vec-tree = "0.1.2"
+clap = ""

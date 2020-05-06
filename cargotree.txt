@@ -1,0 +1,22 @@
+climb v0.1.0 (/home/jaron/climb)
+├── clap v2.33.0
+│   ├── ansi_term v0.11.0
+│   ├── atty v0.2.13
+│   │   └── libc v0.2.64
+│   ├── bitflags v1.2.1
+│   ├── strsim v0.8.0
+│   ├── textwrap v0.11.0
+│   │   └── unicode-width v0.1.6
+│   ├── unicode-width v0.1.6 (*)
+│   └── vec_map v0.8.1
+├── regex v1.3.1
+│   ├── aho-corasick v0.7.6
+│   │   └── memchr v2.2.1
+│   ├── memchr v2.2.1 (*)
+│   ├── regex-syntax v0.6.12
+│   └── thread_local v0.3.6
+│       └── lazy_static v1.4.0
+├── unicode-segmentation v1.3.0
+└── vec-tree v0.1.2
+    └── generational-arena v0.2.3
+        └── cfg-if v0.1.10
